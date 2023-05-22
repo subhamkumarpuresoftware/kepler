@@ -23,6 +23,6 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: quay.io/sustainable_computing_io/kepler
+          tags: odidev/kepler
           labels: latest
           file: build/Dockerfile
