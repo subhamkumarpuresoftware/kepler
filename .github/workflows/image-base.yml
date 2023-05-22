@@ -60,7 +60,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: odidev/kepler
+          tags: odidev/kepler_builder
           labels: latest-amd64
           file: build/Dockerfile.builder
           build-args: |
@@ -71,7 +71,7 @@ jobs:
           context: .
           platforms: linux/arm64
           push: true
-          tags: odidev/kepler
+          tags: odidev/kepler_builder
           labels: latest-arm64
           file: build/Dockerfile.builder
           build-args: |
