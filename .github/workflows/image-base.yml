@@ -41,15 +41,8 @@ jobs:
           tags: odidev/kepler_base:latest-arm64
       - name: Create and upload multi-arch image
         run: make multi-arch-image-base
-name: image builder
 
-on:
-  push:
-    branches: 
-      - 'main'
-
-jobs:
-  image_build:
+  builder_image:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
