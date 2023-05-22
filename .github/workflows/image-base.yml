@@ -16,14 +16,14 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Login do docker.io
         run: docker login -u odidev -p nibble@123
-#       - name: Build and push amd64
-#         uses: docker/build-push-action@v3
-#         with:
-#           context: .
-#           file: ./build/Dockerfile.base
-#           platforms: linux/amd64
-#           push: true
-#           tags: quay.io/sustainable_computing_io/kepler_base:latest-amd64
+      - name: Build and push amd64
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./build/Dockerfile.base
+          platforms: linux/amd64
+          push: true
+          tags: odidev/kepler_base:latest-amd64
 #       - name: Build and push s390x
 #         uses: docker/build-push-action@v3
 #         with:
