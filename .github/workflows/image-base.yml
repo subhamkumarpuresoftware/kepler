@@ -3,7 +3,7 @@ name: base
 on:
   push:
     branches: 
-      - 'base'
+      - 'main'
 jobs:
   baseimagebuild:
     runs-on: ubuntu-latest
