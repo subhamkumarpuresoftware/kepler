@@ -2,7 +2,8 @@ name: image builder
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - 'main'
 
 jobs:
   image_build:
