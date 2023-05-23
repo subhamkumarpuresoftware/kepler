@@ -17,7 +17,8 @@ COPY . .
 RUN mkdir -p data
 
 # Build kepler
-RUN make build SOURCE_GIT_TAG=$SOURCE_GIT_TAG BIN_TIMESTAMP=$BIN_TIMESTAMP
+# RUN make build SOURCE_GIT_TAG=$SOURCE_GIT_TAG BIN_TIMESTAMP=$BIN_TIMESTAMP
+RUN make build 
 RUN ls ./_output/bin
 # RUN make test
 
