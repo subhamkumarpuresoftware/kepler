@@ -1,4 +1,5 @@
-FROM quay.io/sustainable_computing_io/kepler_builder:ubi-8.6-bcc-0.24-go1.18 as builder
+ARG TAG
+FROM odidev/kepler_builder:latest-${TAG} as builder
 
 ARG BIN_TIMESTAMP
 ARG SOURCE_GIT_TAG
@@ -21,7 +22,7 @@ RUN ls ./_output/bin
 # RUN make test
 
 # build image
-FROM quay.io/sustainable_computing_io/kepler_base:cuda-12.1.0-base-ubi8-bcc-0.24
+FROM odidev/kepler_base:latest-${TAG}
 
 COPY --from=builder /opt/app-root/src/github.com/sustainable-computing-io/kepler/_output/bin/kepler /usr/bin/kepler
 
