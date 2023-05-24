@@ -2,6 +2,7 @@ ARG TAG=amd64
 
 FROM odidev/kepler_base:latest-${TAG} as builder
 #USER root
+ARG ARCH
 RUN echo $TAG;
 # LABEL name=kepler-builder
 
@@ -14,4 +15,4 @@ RUN echo $TAG;
 #        curl -LO https://go.dev/dl/go1.18.1.linux-amd64.tar.gz; mkdir -p /usr/local; tar -C /usr/local -xvzf go1.18.1.linux-amd64.tar.gz; rm -f go1.18.1.linux-amd64.tar.gz; \
 #     fi 
 # RUN echo ${ARCH};
-RUN curl -LO https://go.dev/dl/go1.18.1.linux-${TAG}.tar.gz; mkdir -p /usr/local; tar -C /usr/local -xvzf go1.18.1.linux-${TAG}.tar.gz; rm -f go1.18.1.linux-{$TAG}.tar.gz
+# RUN curl -LO https://go.dev/dl/go1.18.1.linux-${TAG}.tar.gz; mkdir -p /usr/local; tar -C /usr/local -xvzf go1.18.1.linux-${TAG}.tar.gz; rm -f go1.18.1.linux-{$TAG}.tar.gz
