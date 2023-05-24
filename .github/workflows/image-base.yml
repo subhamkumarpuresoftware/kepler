@@ -63,9 +63,7 @@ jobs:
           tags: odidev/kepler_builder:latest-amd64
           labels: latest-amd64
           file: build/Dockerfile.builder
-          build-args: |
-            TAG=amd64
-            TAG=amd64
+          build-args: TAG="amd64"
     - name: Build and push arm64 image
       uses: docker/build-push-action@v4
       with:
@@ -75,6 +73,4 @@ jobs:
           tags: odidev/kepler_builder:latest-arm64
           labels: latest-arm64
           file: build/Dockerfile.builder
-          build-args: |
-            TAG=arm64
-            TAG=arm64
+          build-args: TAG="arm64"
