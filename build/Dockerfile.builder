@@ -1,4 +1,4 @@
-ARG TAG
+ARG TAG=amd64
 
 FROM odidev/kepler_base:latest-${TAG} as builder
 #USER root
