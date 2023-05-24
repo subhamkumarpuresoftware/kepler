@@ -1,8 +1,8 @@
 ARG TAG
 FROM odidev/kepler_builder:latest-${TAG} as builder
 
-ARG BIN_TIMESTAMP=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
-ARG SOURCE_GIT_TAG=$(shell echo $(BIN_TIMESTAMP) | tr -d ':' | tr 'T' '-' | tr -d 'Z')
+ARG BIN_TIMESTAMP
+ARG SOURCE_GIT_TAG
 
 LABEL name=kepler-builder
 
