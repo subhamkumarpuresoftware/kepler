@@ -65,6 +65,7 @@ jobs:
           file: build/Dockerfile.builder
           build-args: |
             TAG=amd64
+            TAG=amd64
     - name: Build and push arm64 image
       uses: docker/build-push-action@v4
       with:
@@ -75,4 +76,5 @@ jobs:
           labels: latest-arm64
           file: build/Dockerfile.builder
           build-args: |
+            TAG=arm64
             TAG=arm64
