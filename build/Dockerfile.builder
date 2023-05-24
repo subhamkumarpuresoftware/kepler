@@ -3,7 +3,7 @@ ARG TAG=amd64
 FROM odidev/kepler_base:latest-${TAG} as builder
 #USER root
 ARG ARCH
-RUN echo $TAG;
+RUN echo $ARCH;
 # LABEL name=kepler-builder
 
 # RUN yum install -y kernel-devel make git gcc rpm-build systemd && \
