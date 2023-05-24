@@ -2,7 +2,7 @@ ARG TAG
 
 
 FROM odidev/kepler_base:latest-${TAG} as builder
-ENV ARCH=$TAG
+ENV ARCH=${TAG}
 #USER root
 
 LABEL name=kepler-builder
