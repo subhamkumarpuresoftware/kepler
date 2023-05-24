@@ -1,7 +1,7 @@
 ARG TAG
 
 
-FROM odidev/kepler_base:latest-${ARCH} as builder
+FROM odidev/kepler_base:latest-${TAG} as builder
 ENV ARCH=$TAG
 #USER root
 
